@@ -1,0 +1,41 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Movie Recommender System
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='style1.css')}}">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=PT+Serif:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-10 mx-lg-auto mx-md-auto">
+
+      <h1>Recommender Zone</h1>
+
+      
+      {{ wtf.quick_form(form) }}
+
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer" style="position: absolute;">
+  <br> 
+  <div class="social" style="margin-bottom: 8px">
+  <a class="social-icons" href="https://github.com/shivi0" target="_blank"><i class="fa fa-github" style="font-size:24px;color: #e4e0e0"></i></a>
+  <a class="social-icons" href="https://www.linkedin.com/in/shivangi-sangwan5" target="_blank"><i class="fa fa-linkedin" style="font-size:24px;color: #e4e0e0"></i></a>
+  <a class="social-icons" href="https://www.instagram.com/shivangi_sangwan5/" target="_blank"><i class="fa fa-instagram" style="font-size:24px;color: #e4e0e0"></i></a>
+  
+</div>
+</footer>
+
+{% endblock %}

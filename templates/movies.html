@@ -1,0 +1,62 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+Movie Recommender System
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='style2.css')}}">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=PT+Serif:ital@1&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <h1>Recommended Movies</h1>
+
+    <div class="flex-container">
+        <div class="card" style="width: 16rem;">
+            <img src="{{movieap}}" class="card-img-top" alt="{{moviea}}">
+            <div class="card-body">
+                <h5 class="card-title">{{moviea}}</h5>
+                <a href="{{ url_for('details', movie=moviea) }}" class="btn">Show More..</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 16rem;">
+            <img src="{{moviebp}}" class="card-img-top" alt="{{movieb}}">
+            <div class="card-body">
+                <h5 class="card-title">{{movieb}}</h5>
+                <a href="{{ url_for('details', movie=movieb) }}" class="btn">Show More..</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 16rem;">
+            <img src="{{moviecp}}" class="card-img-top" alt="{{moviec}}">
+            <div class="card-body">
+                <h5 class="card-title">{{moviec}}</h5>
+                <a href="{{ url_for('details', movie=moviec) }}" class="btn">Show More..</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 16rem;">
+            <img src="{{moviedp}}" class="card-img-top" alt="{{movied}}">
+            <div class="card-body">
+                <h5 class="card-title">{{movied}}</h5>
+                <a href="{{ url_for('details', movie=movied) }}" class="btn">Show More..</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 16rem;">
+            <img src="{{movieep}}" class="card-img-top" alt="{{moviee}}">
+            <div class="card-body">
+                <h5 class="card-title">{{moviee}}</h5>
+                <a href="{{ url_for('details', movie=moviee) }}" class="btn">Show More..</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

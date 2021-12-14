@@ -1,0 +1,60 @@
+body { 
+    background: url("/static/wallpaperflare.com_wallpaper\ 2.0.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+.container{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footer {
+    color: #e4e0e0;
+    background-color: #e50914d1;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-icons{
+    margin-left: 15px;
+}
+
+h1{
+    text-align: center;
+    font-size: 60px;
+    font-weight: 900;
+    color: #e50914;
+    text-shadow: #000000 0px 0px 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.form-group.required{
+    font-size: 20px;
+    font-weight: bold;
+    color: #e50914;
+    text-shadow: #000000 0px 0px 13px;
+}
+
+
+.btn{
+    background-color: #e50914;
+    border: #e50914;
+}
+
+.btn:hover{
+    background-color: #e50914;
+    border: #e50914;
+    border-radius: 5px;
+    box-shadow: 0 0.5em 0.5em -0.4em #e50914 ;
+}
+
+@media (max-width: 650px){
+    h1{
+        font-size: 45px;
+        text-align: center;
+    }
+}

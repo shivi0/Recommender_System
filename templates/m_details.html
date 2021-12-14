@@ -1,0 +1,124 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+Movie Recommender System
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='style3.css')}}">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=PT+Serif:ital@1&display=swap"
+    rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<div class="bg-image">
+
+
+    <div class="content-body">
+        <center>
+            <h2 style="font-size: 3rem;">{{movie}}</h2>
+        </center>
+    </div>
+
+    <div class="ml-container">
+        <div class="contents">
+            <div class="contain">
+                <img src="{{pos}}" class="img" height="500">
+
+                <div class="details">
+                    <br>
+                    <h6>GENRE: &nbsp; {{genre}}
+
+                    </h6>
+
+                    <br>
+                    <h6>OVERVIEW: &nbsp; {{overview}}</h6>
+                    <br>
+
+                    <h6>CAST: &nbsp; {{cast}}
+
+                    </h6>
+                    <br>
+                    <h6>DIRECTOR: &nbsp; {{direc}}
+                    </h6>
+
+                </div>
+            </div>
+
+            <br>
+
+            <center>
+                <h2 style="font-family: 'Rowdies', cursive;color:white; text-decoration: underline;">USER-REVIEWS
+                </h2>
+
+                <div class="tables col-md-12" style="margin: 0 auto;">
+                    <table class="table table-bordered" bordercolor="white" style="color:white">
+                        <thead>
+                            <tr>
+                                <th class="text-center" scope="col" style="width: 75%">Comments</th>
+                                <th class="text-center" scope="col">Sentiments</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr style="background-color:#e5091485;">
+                                <td>{{m_reviews[0]}}</td>
+                                <td>
+                                    <center>
+                                        {{ans_review[0]}}
+                                    </center>
+                                </td>
+                            </tr>
+
+                            <tr style="background-color:#e5091485;">
+                                <td>{{m_reviews[1]}}</td>
+                                <td>
+                                    <center>
+                                        {{ans_review[1]}}
+                                    </center>
+                                </td>
+                            </tr>
+
+                            <tr style="background-color:#e5091485;">
+                                <td>{{m_reviews[2]}}</td>
+                                <td>
+                                    <center>
+                                        {{ans_review[2]}}
+                                    </center>
+                                </td>
+                            </tr>
+
+                            <tr style="background-color:#e5091485;">
+                                <td>{{m_reviews[3]}}</td>
+                                <td>
+                                    <center>
+                                        {{ans_review[3]}}
+                                    </center>
+                                </td>
+                            </tr>
+
+                            <tr style="background-color:#e5091485;">
+                                <td>{{m_reviews[4]}}</td>
+                                <td>
+                                    <center>
+                                        {{ans_review[4]}}
+                                    </center>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </center>
+
+            <center>
+                <a href="{{ url_for('home') }}" class="btn">Go back to the main Page</a>
+            </center>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

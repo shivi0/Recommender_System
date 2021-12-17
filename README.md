@@ -8,4 +8,4 @@ This is a Content-based recommendation system which recommends 5 movies based on
 
 I have also done some web-scraping for getting the reviews related to a movie. I have used Flask as my web framework and then deployed it on Heroku.
 
-#### Working Link : 
+#### Working Link : https://movie-zone-api.herokuapp.com/

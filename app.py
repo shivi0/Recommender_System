@@ -26,7 +26,7 @@ y = np.insert(x, 0,'')
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = 'Shivangi0503'
+app.config['SECRET_KEY'] = 'YOUR_SECRET_KEY'
 
 Bootstrap(app)
 
@@ -35,7 +35,7 @@ class mainform(FlaskForm):
     submit = SubmitField('Submit')
 
 def fetch_poster(movie_id):
-    url = "https://api.themoviedb.org/3/movie/{}?api_key=8265bd1679663a7ea12ac168da84d2e8&language=en-US".format(movie_id)
+    url = "https://api.themoviedb.org/3/movie/{}?api_key=<YOUR_API_KEY>8&language=en-US".format(movie_id)
     data = requests.get(url)
     data = data.json()
     poster_path = data['poster_path']
@@ -43,7 +43,7 @@ def fetch_poster(movie_id):
     return full_path   
 
 def fetch_imdb_id(movie_id):
-    url = "https://api.themoviedb.org/3/movie/{}?api_key=8265bd1679663a7ea12ac168da84d2e8&language=en-US".format(movie_id)
+    url = "https://api.themoviedb.org/3/movie/{}?api_key=<YOUR_API_KEY>8&language=en-US".format(movie_id)
     data = requests.get(url)
     data = data.json()
     imdb_id = data['imdb_id']
